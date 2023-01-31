@@ -1,0 +1,60 @@
+@import url(style/modoNoturno.css);
+
+:root{
+    --label-icone: url("img/botao-dia.png");
+    --imagem-principal: url("img/imagem-dia.png");
+    --cor-fonte: #000000;
+    --cor-fundo: #ffffff;
+}
+
+.modo-dark{
+    --label-icone: url("img/botao-noite.png");
+    --imagem-principal: url("img/imagem-noite.png");
+    --cor-fonte: #ffffff;
+    --cor-fundo: #000000;
+}
+
+
+.flex__container{
+    display: flex;
+}
+.corpo__main{
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    transition: 2s; 
+    height: 100vh;
+}
+
+.mudar-tema{
+    background-image: var(--label-icone);
+    padding: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    cursor: pointer;
+}
+#btn{
+    display: none;
+}
+.container__conteudo{
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.conteudo__imagem{
+    margin-top: 3rem;
+    width: 500px;
+    height: 500px;
+    background-image: var(--imagem-principal);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.conteudo__texto{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--cor-fonte);
+}
